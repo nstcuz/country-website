@@ -7,49 +7,34 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:wght@100..900&display=swap" rel="stylesheet"> <!-- Inter && Cabin-->
-    <title>Azorez</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet"> <!-- Bebas Neue && Cabin -->
+    <title>Azores</title>
 </head>
 <body>
     <header>
-        <h1><span>The Islands of </span>Azorez</h1>
+        <a href="index.html"><h1><span>The </span>Azores</h1></a>
         <nav>
             <ul>
                 <li><a href="attractions.html">Attractions</a></li>
                 <li><a href="wildlife.html">Wildlife</a></li>
                 <li><a href="credits.html">Credits</a></li>
-                <li><a href="#contact-us">Contact Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <video autoplay muted loop playsinline  height="50%">
+        <video autoplay muted loop playsinline height="50%">
             <source src="media/abandon-church-saomiguel.mp4" type="video/mp4">
             Your browser does not support the video element.
         </video>
-        <nav>
-            <div class="nav-card"><a href="attractions.html"><img src="media/sun-icon.png" alt=""><h2>Attractions</h2></a></div>
-            <div class="nav-card"><a href="wildlife.html"><img src="media/fishs-icon.png" alt=""><h2>Wildlife</h2></a></div>
-            <div class="nav-card"><a href="credits.html"><img src="media/credits.png" alt=""><h2>Credits</h2></a></div>
-            <div class="nav-card"><a href="#contact-us"><img src="media/mail-icon.png" alt=""><h2>Contact Us</h2></a></div>
-        </nav>
-        <form id="contact-us" action="#" method="post">
-        <h2>Want to book an Inquiry?</h2>
-            <fieldset>
-                <legend>Contact us Below!</legend>
-                <div>
-                    <label for="name">Name:</label>	
-                    <input type="text" name="user-name" id="name">
-
-                    <label for="email">Email:</label>
-                    <input type="email" name="user-email" id="email">
-                </div>
-                <div class="form-textarea">
-                    <label for="comments">Add any extra comments below and we will get back to you.</label>
-                    <textarea name="comments" id="comments" cols="30" rows="5"></textarea>	
-                </div>
-            </fieldset>
-        </form>
+        <section class="home">
+            <nav>
+                <div class="nav-card"><a href="attractions.html"><img src="media/sun-icon.png" alt=""><h2>Attractions</h2></a></div>
+                <div class="nav-card"><a href="wildlife.html"><img src="media/fishs-icon.png" alt=""><h2>Wildlife</h2></a></div>
+                <div class="nav-card"><a href="credits.html"><img src="media/credits.png" alt=""><h2>Credits</h2></a></div>
+                <div class="nav-card"><a href="contact-us"><img src="media/mail-icon.png" alt=""><h2>Contact Us</h2></a></div>
+            </nav>
+        </section>
     </main>
     <footer>
         <p>&copy; FWD 2024 nic cousins</p>
