@@ -2,14 +2,13 @@
     --header-text: #232634;
     --header-footer-background: #e8eceb;
     --body-background-color: #e8eceb; 
-    /* --background-color: #949cbb; */
     --background-accent: #747c96;
 
     --border-color: #51576d;
     --border-radius: 2rem;
 
-    --header-font: 'Helvetica',sans-serif;
-    --p-font: 'Bebas Neue', sans-serif;
+    --header-font: 'Bebas Neue', sans-serif;
+    --p-font: 'Cabin', sans-serif;
 /* https://coolors.co/palette/001219-005f73-0a9396-94d2bd-e9d8a6-ee9b00-ca6702-bb3e03-ae2012-9b2226 */
 }
 
@@ -22,6 +21,8 @@
     footer */
 
 /* ------------contact page------------ */
+/* ------------credits page----------- */
+/* ---------------attractions------------- */
 
 /* ----------- typography & some setup --------------- */
 
@@ -39,10 +40,12 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-font);
+    color: var(--header-text);
 }
 
 p {
     font-family: var(--p-font);
+    color: var(--header-text);
 }
 
 a,
@@ -63,7 +66,7 @@ h1 {
     color: var(--header-text);
     font-size: 2.5rem;
     margin: 0;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
 }
 
 header {
@@ -76,22 +79,34 @@ header {
     right: 0;
     text-align: center;
     color: var(--header-text);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header nav ul {
     display: none;
 }
 
-header li a:hover {
+header a:hover {
     font-weight: 700;
     color: var(--header-text);
 }
 
-video {
-    display: none;
+.contact-button {
+    margin-right: 1rem;
+    color: var(--header-text);
+}
+
+.contact-button p {
+    font-family: var(--header-font);
 }
 
 /* ---------------------main----------------- */
+
+video {
+    display: none;
+}
 
 main { 
     margin: 0 auto;
@@ -113,6 +128,10 @@ main nav {
     padding: .5rem auto;
     /* padding-left: 0; */
     /* background-color: var(--background-color); */
+}
+
+.intro {
+    margin: auto 2rem;
 }
 
 .nav-card {
@@ -225,6 +244,35 @@ input {
     text-align: center;
 }
 
+
+/* ------------credits page ------------- */
+
+caption {
+    font-size: 2rem;
+}
+
+/* ---------------attractions------------- */
+
+.menu-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 5rem 2rem;
+}
+
+.menu-card {
+    padding: 1rem; 
+}
+
+.menu-items img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    border-radius: var(--border-radius);
+    margin-top: 2rem;
+}
+
+
 /* ---------------media queries---------------- */
 
 @media (min-width: 50em) {
@@ -255,7 +303,6 @@ input {
     header nav ul {
         display: flex;
         flex-direction: row;
-        text-decoration: underline 1px solid;
         text-decoration-color: var(--header-text);
         /* need padding left to be 0 when using ul with a tags idk why*/
         padding-left: 0;
@@ -289,6 +336,15 @@ input {
         margin: 0 auto;
     }
 
+
+.intro {
+    margin: auto 4rem;
+    padding: 1rem 2rem;
+    background-color: var(--body-background-color);
+    border: var(--border-color);
+    border-radius: var(--border-radius);
+}
+
     form {
         margin: auto auto;
         border: 2px solid var(--border-color);
@@ -297,7 +353,8 @@ input {
 /* ------------footer---------- */
 
     footer {
-        position: absolute;
+        position: relative;
+        /* position: absolute; */
         bottom: 0;
         left: 0;
         right: 0;
@@ -306,5 +363,16 @@ input {
         text-align: center;
         width: 100%;
         padding-top: 1rem;
+    }
+
+
+
+/* ---------------attractions------------- */
+
+    .menu-items {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 1rem;
+        margin: 5rem 2rem;
     }
 }
