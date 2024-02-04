@@ -288,14 +288,17 @@ caption {
 
 .wildlife-gallery {
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+
 }
 
 .wildlife-gallery img {
     display: block;
     max-width: 20%;
+    min-width: 200px;
     height: auto;
     margin-right: 1rem;
 }
@@ -413,7 +416,13 @@ th {
     .menu-items {
         display: grid;
         grid-template-columns: 1fr 300px;
-        gap: 1rem;
+        gap: 4rem;
         margin: 5rem 2rem;
+    }
+
+/* ----------------wilfelife----------- */
+
+    .wildlife-gallery {
+        flex-direction: row;
     }
 }
