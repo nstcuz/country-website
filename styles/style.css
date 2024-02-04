@@ -22,7 +22,7 @@
 
 /* ------------contact page------------ */
 /* ------------credits page----------- */
-/* ---------------attractions------------- */
+/* ---------------attractions / wildlife------------- */
 
 /* ----------- typography & some setup --------------- */
 
@@ -84,8 +84,14 @@ header {
     align-items: center;
 }
 
-header nav ul {
+.navbar-home ul {
     display: none;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header a:hover {
@@ -126,8 +132,6 @@ main nav {
     border-radius: var(--border-radius);
     margin: 1rem 1rem;
     padding: .5rem auto;
-    /* padding-left: 0; */
-    /* background-color: var(--background-color); */
 }
 
 .intro {
@@ -251,7 +255,7 @@ caption {
     font-size: 2rem;
 }
 
-/* ---------------attractions------------- */
+/* ---------------attractions / wildlife------------- */
 
 .menu-items {
     display: grid;
@@ -272,6 +276,42 @@ caption {
     margin-top: 2rem;
 }
 
+.wildlife {
+    margin: auto 2rem;
+}
+
+.wildlife-container h1, h2 {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.wildlife-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.wildlife-gallery img {
+    display: block;
+    max-width: 20%;
+    height: auto;
+    margin-right: 1rem;
+}
+
+/* ---------------- credits --------------- */
+table td {
+    border: 2px solid var(--border-color);
+}
+
+table {
+    margin-top: 2rem;
+}
+
+th {
+    text-align: start;
+}
 
 /* ---------------media queries---------------- */
 
@@ -307,6 +347,10 @@ caption {
         /* need padding left to be 0 when using ul with a tags idk why*/
         padding-left: 0;
     }
+
+    .navbar-home ul {
+    display: flex;
+}
 
     header nav li {
         margin-right: 1rem;
@@ -354,7 +398,6 @@ caption {
 
     footer {
         position: relative;
-        /* position: absolute; */
         bottom: 0;
         left: 0;
         right: 0;
@@ -364,8 +407,6 @@ caption {
         width: 100%;
         padding-top: 1rem;
     }
-
-
 
 /* ---------------attractions------------- */
 
