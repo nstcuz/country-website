@@ -15,14 +15,13 @@
 
 /* -------------------------table of contents---------------------- */
 /* ---------------index------------------- */
-/* setup
-    header
-    main 
-    footer */
-
+/* setup     header      main     footer */
 /* ------------contact page------------ */
-/* ------------credits page----------- */
-/* ---------------attractions / wildlife------------- */
+/* ------attractions / wildlife------ */
+/* --------------credits----------- */
+/* ----------geography----------- */
+/* --------media queries------- */
+
 
 /* ----------- typography & some setup --------------- */
 
@@ -52,11 +51,15 @@ a,
 li {
     text-decoration: none;
     list-style: none;
-    color: black;
+    color: var(--header-text);
 }
 
 a:visited {
-    color: black;
+    color: var(--header-text);
+}
+
+img {
+    filter: drop-shadow(0.5rem 0.5rem 0.25rem #6e6e6e);
 }
 
 /* ---------------header / banner img-------------- */
@@ -82,6 +85,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
 }
 
 .navbar-home ul {
@@ -161,11 +165,11 @@ main nav {
     background-color: #badeab;
 } 
 
-.nav-card a {
+/* .nav-card a {
     text-decoration: none;
     color: var(--background-color);
     font-weight: bold;
-}
+} */
 
 .nav-card img {
     border-radius: var(--border-radius);
@@ -178,7 +182,7 @@ main nav {
 }
 
 .nav-card:hover a {
-    color: var(--body-background-color);
+    color: #e8ecbe;
 }
 
 .home-bottom {
@@ -248,8 +252,18 @@ input {
     text-align: center;
 }
 
+/* ---------------- credits --------------- */
+table td {
+    border: 2px solid var(--border-color);
+}
 
-/* ------------credits page ------------- */
+table {
+    margin-top: 2rem;
+}
+
+th {
+    text-align: start;
+}
 
 caption {
     font-size: 2rem;
@@ -301,19 +315,29 @@ caption {
     min-width: 200px;
     height: auto;
     margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
-/* ---------------- credits --------------- */
-table td {
+/* -------------------geography--------------------- */
+
+.explore-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 4rem 2rem;
+}
+
+.explore-item {
     border: 2px solid var(--border-color);
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-table {
-    margin-top: 2rem;
-}
-
-th {
-    text-align: start;
+.explore-item img {
+    border-radius: var(--border-radius);
+   border: 2px solid white; 
 }
 
 /* ---------------media queries---------------- */
@@ -424,5 +448,19 @@ th {
 
     .wildlife-gallery {
         flex-direction: row;
+    }
+
+    /* -------------explore----------- */
+    .explore-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .explore-container {
+        margin-bottom: -2px;
+    }
+
+    .explore-image {
+        min-width: 260px;
+        height: auto;
     }
 }
