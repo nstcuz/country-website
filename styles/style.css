@@ -3,13 +3,11 @@
     --header-footer-background: #e8eceb;
     --body-background-color: #e8eceb; 
     --background-accent: #747c96;
-
     --border-color: #51576d;
     --border-radius: 2rem;
 
     --header-font: 'Bebas Neue', sans-serif;
     --p-font: 'Cabin', sans-serif;
-/* https://coolors.co/palette/001219-005f73-0a9396-94d2bd-e9d8a6-ee9b00-ca6702-bb3e03-ae2012-9b2226 */
 }
 
 
@@ -76,16 +74,18 @@ header {
     background-color: var(--header-footer-background);
     font-family: var(--header-font);
     border-bottom: 2px solid var(--border-color);
+    text-align: center;
+    color: var(--header-text);
+    z-index: 10;
+    
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    text-align: center;
-    color: var(--header-text);
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
 }
 
 .navbar-home ul {
@@ -96,10 +96,11 @@ header nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 1rem;
 }
 
 header a:hover {
-    font-weight: 700;
+    font-size: 1.05rem;
     color: var(--header-text);
 }
 
@@ -154,22 +155,16 @@ main nav {
 }
 
 .nav-card:nth-child(2) {
-    background-color: #94D2BD;
+    background-color: #c1cfca;
 } 
 
 .nav-card:nth-child(3) {
-    background-color: #e8efc5;
+    background-color: #a1a496;
 } 
 
 .nav-card:nth-child(4) {
-    background-color: #badeab;
+    background-color: #a9b6a3;
 } 
-
-/* .nav-card a {
-    text-decoration: none;
-    color: var(--background-color);
-    font-weight: bold;
-} */
 
 .nav-card img {
     border-radius: var(--border-radius);
@@ -178,7 +173,11 @@ main nav {
 }
 
 .nav-card:hover {
-    background-color: var(--header-text);
+    /* background-color: var(--header-text); */
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
 }
 
 .nav-card:hover a {
@@ -193,8 +192,6 @@ main nav {
     margin-left: 1rem;
 }
 
-
-
 /* -----------------footer-------------- */
 footer {
     background-color: var(--header-footer-background);
@@ -206,9 +203,6 @@ footer {
     bottom: 0;
     color: var(--header-text);
 }
-
-
-
 
 /* -------------contact page------------ */
 
@@ -225,12 +219,6 @@ form {
     border-radius: var(--border-radius);
 }
 
-form div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 label {
     text-align: start;
     margin-bottom: 0.25rem;
@@ -244,6 +232,7 @@ fieldset {
 
 input {
     margin-bottom: 0.25rem;
+    margin-left: auto;
 }
 
 .form-textarea {
@@ -258,7 +247,7 @@ table td {
 }
 
 table {
-    margin-top: 2rem;
+    margin: auto 2rem;
 }
 
 th {
@@ -275,7 +264,16 @@ caption {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-    margin: 5rem 2rem;
+    margin-top: 2rem;
+}
+
+.menu-items p {
+    max-width: 50rem;
+    margin: auto 1rem;
+}
+
+.menu-items h1, .menu-items h2 {
+    margin: auto 1rem;
 }
 
 .menu-card {
@@ -283,48 +281,58 @@ caption {
 }
 
 .menu-items img {
-    width: 100%;
+    max-width: 300px;
     height: 250px;
     display: block;
+    border: 2px solid white;
     border-radius: var(--border-radius);
-    margin-top: 2rem;
+    margin: 1rem auto;
 }
 
-.wildlife {
-    margin: auto 2rem;
-}
-
-.wildlife-container h1, h2 {
+.photo-gal h2 {
     text-align: center;
-    display: block;
-    width: 100%;
+}
+
+.wildlife-container {
+    margin: 1rem 1rem;
+}
+
+.wildlife-container p {
+    max-width: 50rem;
 }
 
 .wildlife-gallery {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
 }
 
 .wildlife-gallery img {
-    display: block;
-    max-width: 20%;
+    max-width: 400px;
+    width: 100%;
     min-width: 200px;
     height: auto;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin: auto 1rem;
 }
 
-/* -------------------geography--------------------- */
+.wildlife-gallery:first-child {
+    border: 0px solid white;
+}
+
+
+/* -------------------explore--------------------- */
 
 .explore-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    margin: 4rem 2rem;
+    margin: -2px auto;
+}
+
+.explore-container p {
+    max-width: 30rem;
 }
 
 .explore-item {
@@ -332,6 +340,7 @@ caption {
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -359,13 +368,12 @@ caption {
         display: none;
     }
 
-    header {
+    /* header {
         position: fixed;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-radius: 0px;
-    }
+    } */
 
     header nav ul {
         display: flex;
@@ -376,8 +384,8 @@ caption {
     }
 
     .navbar-home ul {
-    display: flex;
-}
+        display: flex;
+    }
 
     header nav li {
         margin-right: 1rem;
@@ -388,7 +396,6 @@ caption {
     }
 
     /* -----------main----------- */
-
     main {
         display: flex;
         justify-content: center;
@@ -408,13 +415,14 @@ caption {
     }
 
 
-.intro {
-    margin: auto 4rem;
-    padding: 1rem 2rem;
-    background-color: var(--body-background-color);
-    border: var(--border-color);
-    border-radius: var(--border-radius);
-}
+    .intro {
+        margin: auto 4rem;
+        padding: 1rem 2rem;
+        background-color: var(--body-background-color);
+        border: 2px solid var(--border-color);
+        border-radius: var(--border-radius);
+        max-width: 24rem;
+    }
 
     form {
         margin: auto auto;
@@ -444,13 +452,20 @@ caption {
         margin: 5rem 2rem;
     }
 
-/* ----------------wilfelife----------- */
-
-    .wildlife-gallery {
-        flex-direction: row;
+    .menu-items img {
+        border: 2px solid white;        
     }
 
-    /* -------------explore----------- */
+    .menu-items p {
+        height: auto;
+    }
+
+/* ----------------wildlife----------- */
+    .wildlife-container {
+        margin: auto 2rem;
+    }
+
+/* -------------explore----------- */
     .explore-container {
         grid-template-columns: repeat(2, 1fr);
     }
