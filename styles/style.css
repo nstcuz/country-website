@@ -45,8 +45,7 @@ p {
     color: var(--header-text);
 }
 
-a,
-li {
+li, a {
     text-decoration: none;
     list-style: none;
     color: var(--header-text);
@@ -99,18 +98,20 @@ header nav ul {
     margin-right: 1rem;
 }
 
-header a:hover {
-    font-size: 1.05rem;
-    color: var(--header-text);
-}
-
 .contact-button {
+    display: block;
     margin-right: 1rem;
-    color: var(--header-text);
 }
 
-.contact-button p {
-    font-family: var(--header-font);
+header li {
+    margin-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+}
+
+header li:hover {
+    border-bottom: 2px solid var(--border-color);
+    /* color: var(--header-text); */
+
 }
 
 /* ---------------------main----------------- */
@@ -138,6 +139,10 @@ main nav {
     margin: 1rem 1rem;
     padding: .5rem auto;
 }
+
+/* .contact-button {
+    display: none;
+} */
 
 .intro {
     margin: auto 2rem;
@@ -328,7 +333,7 @@ caption {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    margin: -2px auto;
+    margin: -2px 2rem;
 }
 
 .explore-container p {
@@ -368,13 +373,6 @@ caption {
         display: none;
     }
 
-    /* header {
-        position: fixed;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    } */
-
     header nav ul {
         display: flex;
         flex-direction: row;
@@ -387,12 +385,16 @@ caption {
         display: flex;
     }
 
+    .contact-button {
+        display: none;
+    }
+
     header nav li {
         margin-right: 1rem;
     }
 
     header nav a {
-        color: var(--body-background-color);
+        color: var(--header-text);
     }
 
     /* -----------main----------- */
@@ -437,19 +439,21 @@ caption {
         left: 0;
         right: 0;
         border-top: 2px solid var(--border-color);
-        border-radius: 0px; /* for some reason */
         text-align: center;
         width: 100%;
-        padding-top: 1rem;
     }
 
 /* ---------------attractions------------- */
 
     .menu-items {
+        margin: 2rem 2rem;
+    }
+
+    .menu-items article {
         display: grid;
-        grid-template-columns: 1fr 300px;
+        grid-template-columns: 3fr 1fr;
+        align-items: center;
         gap: 4rem;
-        margin: 5rem 2rem;
     }
 
     .menu-items img {
@@ -462,16 +466,13 @@ caption {
 
 /* ----------------wildlife----------- */
     .wildlife-container {
-        margin: auto 2rem;
+        margin: 2rem 2rem;
     }
 
 /* -------------explore----------- */
     .explore-container {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .explore-container {
-        margin-bottom: -2px;
+        margin: -2px 2rem;
     }
 
     .explore-image {
