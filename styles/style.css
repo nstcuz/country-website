@@ -345,6 +345,7 @@ caption {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: -1rem;
 }
 
 .explore-item img {
